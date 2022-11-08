@@ -1,15 +1,45 @@
-extends Actor
+extends KinematicBody2D
 
-# Adding the double jump
-var jumps: int = 2
+const SPEED = 3000
+const JUMP_POWER = 7000
+const LOOSE = 40
+const GRAVITY = 150
+# if Double jump unlocked
+const JUMPS = 2
 
-func _physics_process(delta: float) -> void:
-	var direction = Vector2(
-		Input.get_action_strength("move_right") - Input.get_action_strength("move_left"),
-		 -1.0 if Input.get_action_strength("jump") and canJump() else 1.0
-	)
-	velocity = speed * direction 
-	velocity = move_and_slide(velocity)
+var motion = Vector2()
 
-func canJump():
-	return is_on_floor()
+# 1 = Droite; -1 = Gauche
+var _facing : int = 1
+
+func _physics_process(delta):
+	motion.y += GRAVITY
+	if _facing == 1:
+		if motion.x - LOOSE > 0:
+			if is_on_floor():
+				motion.x -= LOOSE * 4
+			else:
+				motion.x -= LOOSE
+		else:
+			motion.x = 0
+	else:
+		if motion.x + LOOSE < 0:
+			if is_on_floor():
+				motion.x += LOOSE * 4
+			else:
+				motion.x += LOOSE
+		else:
+			motion.x = 0
+	
+	if Input.is_action_pressed("ui_left"):
+		motion.x = -SPEED
+		_facing = -1
+	if Input.is_action_pressed("ui_right"):
+		motion.x = SPEED
+		_facing = 1
+	if Input.is_action_pressed("ui_up"):
+		if is_on_floor():
+			motion.y = -JUMP_POWER
+	if Input.is_action_pressed("ui_down"):
+		motion.y += round(GRAVITY / 1.5)
+	motion = move_and_slide(motion, Vector2(0,-1))
