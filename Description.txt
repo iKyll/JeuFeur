@@ -1,0 +1,34 @@
+Jeu 2D, Action platformer
+Systèmes de vagues de monstres
+
+
+Les monstres donnent des pieces a leur mort, ils peuvent également donner des coeurs qui regen le joueur, et rarement ils donnent également de l'équipement
+Entre chaque vague un marchand apparaitra, le joueur pourra lui acheter de l'équipement, vendre son ancien équipement
+A partir de la vague 20, un autre marchand apparaitra, il permettra au joueur de reforger son équipement contre de l'argent
+
+Tous les 5 vagues, une zone de soin apparaitra, le soin doit etre acheté aupres du marchand les autres vagues
+
+Tout les 10 vagues il y aura un combat de boss
+	Si le joueur bat ce boss, il obtiendra un mercenaire qui l'aidera dans ses combats
+	Un mercenaire est un petit personnage qui suivra le joueur (Il peut voler ou non), qui attaquera les ennemies (Distance ou corps à corps: dépend du mercenaire)
+
+	Mercenaire tiré au sort parmi tous les mercenaires existants, ses stats sont aléatoires parmi un plage de valeurs, selon le boss abattu
+
+Vagues infinies, a la vague "50", un "boss de fin" apparait si le joueur le bat il debloque une nouvelle map ainsi que la prochaine difficulté de la carte actuelle (La partie continue toujours)
+
+
+'''
+Système de collection de mercenaires
+	Quand le joueur a obtenu un mercenaire, il se trouvera dans sa collection, le joueur pourra ainsi obtenir des informations sur ce mercenaire
+'''
+
+Voir si les mercenaires se font attaquer ou non
+	Si les mercenaires peuvent mourrir, ils réaparraitront a la vague suivante
+
+La reforge est composée de 'modifiers', qui donneront bonus ou malus a l'équipement
+	La reforge est de plus en plus cher plus la partie avance
+	La reforge donne un modifier pris aléatoirement parmi une liste
+	Le meilleur modifier est plus rare que les autres
+	Le pire est plus rare aussi
+
++Modifier Mystère
