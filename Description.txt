@@ -14,6 +14,8 @@ Tout les 10 vagues il y aura un combat de boss
 
 	Mercenaire tiré au sort parmi tous les mercenaires existants, ses stats sont aléatoires parmi un plage de valeurs, selon le boss abattu
 
+	Les mercenaires sont insensibles et ne se font pas cibler
+
 Vagues infinies, a la vague "50", un "boss de fin" apparait si le joueur le bat il debloque une nouvelle map ainsi que la prochaine difficulté de la carte actuelle (La partie continue toujours)
 
 
@@ -21,9 +23,6 @@ Vagues infinies, a la vague "50", un "boss de fin" apparait si le joueur le bat 
 Système de collection de mercenaires
 	Quand le joueur a obtenu un mercenaire, il se trouvera dans sa collection, le joueur pourra ainsi obtenir des informations sur ce mercenaire
 '''
-
-Voir si les mercenaires se font attaquer ou non
-	Si les mercenaires peuvent mourrir, ils réaparraitront a la vague suivante
 
 La reforge est composée de 'modifiers', qui donneront bonus ou malus a l'équipement
 	La reforge est de plus en plus cher plus la partie avance
