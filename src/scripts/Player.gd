@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 const SPEED = 3000
-const JUMP_POWER = 7000
+const JUMP_POWER = 6500
 const LOOSE = 40
 const GRAVITY = 150
 # if Double jump unlocked
