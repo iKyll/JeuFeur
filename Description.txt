@@ -32,3 +32,13 @@ La reforge est composée de 'modifiers', qui donneront bonus ou malus a l'équip
 	Le pire est plus rare aussi
 
 +Modifier Mystère
+
+Armes:
+	Le joueur utilise l'arme qu'il a d'équipé
+		Il existe 4 différentes armes:
+			L'épée
+			Les dagues
+			Arc
+			Baguette magique
+
+		Les Armes flottent derriere le joueur
