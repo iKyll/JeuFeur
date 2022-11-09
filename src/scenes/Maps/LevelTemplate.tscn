@@ -16,7 +16,7 @@
 points = PoolVector2Array( 0, 0, 384, 0, 384, 512, 0, 512 )
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
-points = PoolVector2Array( 173.456, 0, 512, 0, 512, 352.072, 356.624, 512, 149.264, 512, 0, 364.168, 0, 148.168 )
+points = PoolVector2Array( 160, 0, 512, 0, 512, 352, 352, 352, 352, 512, 160, 512, 160, 352, 0, 352, 0, 160, 160, 160 )
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 512, 0, 512, 512, 0, 512 )
@@ -28,19 +28,19 @@ points = PoolVector2Array( 0, 128, 384, 128, 384, 512, 0, 512 )
 points = PoolVector2Array( 128, 128, 384, 128, 384, 512, 128, 512 )
 
 [sub_resource type="ConvexPolygonShape2D" id=9]
-points = PoolVector2Array( 0, 0, 512, 0, 512, 512, 150.647, 512, 0, 334.218 )
+points = PoolVector2Array( 0, 0, 512, 0, 512, 512, 128, 512, 128, 384, 0, 384 )
 
 [sub_resource type="ConvexPolygonShape2D" id=10]
-points = PoolVector2Array( 512, 0, 509.2, 334.218, 351.607, 512, 0, 512, 0, 0 )
+points = PoolVector2Array( 512, 0, 512, 384, 384, 384, 384, 512, 0, 512, 0, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=11]
-points = PoolVector2Array( 343.312, 0, 512, 172.656, 512, 512, 0, 512, 0, 0 )
+points = PoolVector2Array( 384, 128, 512, 128, 512, 512, 0, 512, 0, 0, 384, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=12]
-points = PoolVector2Array( 158.941, 0, 512, 0, 512, 512, 0, 512, 0, 168.509 )
+[sub_resource type="ConvexPolygonShape2D" id=63]
+points = PoolVector2Array( 128, 0, 512, 0, 512, 512, 0, 512, 0, 128, 128, 128 )
 
 [sub_resource type="ConvexPolygonShape2D" id=13]
-points = PoolVector2Array( 512, 149.896, 512, 348.616, 345.04, 512, 0, 512, 0, 168.904, 168.784, 3.01611, 339.856, 0 )
+points = PoolVector2Array( 512, 352, 352, 352, 352, 512, 0, 512, 0, 160, 160, 160, 160, 0, 352, 0, 352, 160, 512, 160 )
 
 [sub_resource type="ConvexPolygonShape2D" id=14]
 points = PoolVector2Array( 0, 0, 384, 0, 384, 384, 0, 384 )
@@ -52,22 +52,22 @@ points = PoolVector2Array( 128, 0, 384, 0, 384, 352, 128, 352 )
 points = PoolVector2Array( 128, 0, 512, 0, 512, 384, 128, 384 )
 
 [sub_resource type="ConvexPolygonShape2D" id=17]
-points = PoolVector2Array( 358.352, 0, 512, 162.128, 512, 512, 173.456, 512, 0, 343.568, 0, 151.76, 147.536, 0 )
+points = PoolVector2Array( 352, 160, 512, 160, 512, 512, 160, 512, 160, 352, 0, 352, 0, 160, 160, 160, 160, 0, 352, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=18]
-points = PoolVector2Array( 341.584, 0, 512, 156.944, 512, 343.568, 343.312, 512, 151.504, 512, 0, 350.48, 0, 0 )
+points = PoolVector2Array( 352, 160, 512, 160, 512, 352, 352, 352, 352, 512, 160, 512, 160, 352, 0, 352, 0, 0, 352, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=19]
-points = PoolVector2Array( 0, 0, 512, 0, 512, 331.688, 366.48, 511.4, 148.752, 512, 0, 354.152 )
+points = PoolVector2Array( 0, 0, 512, 0, 512, 384, 384, 384, 384, 512, 128, 512, 128, 384, 0, 384 )
 
 [sub_resource type="ConvexPolygonShape2D" id=20]
-points = PoolVector2Array( 338.832, 0, 512, 163.504, 512, 339.76, 350.928, 512, 0, 512, 0, 0 )
+points = PoolVector2Array( 512, 128, 512, 384, 384, 384, 384, 512, 0, 512, 0, 0, 384, 0, 384, 128 )
 
 [sub_resource type="ConvexPolygonShape2D" id=21]
-points = PoolVector2Array( 166.032, 0, 512, 0, 512, 512, 155.664, 512, 0, 342.648, 0, 154.296 )
+points = PoolVector2Array( 512, 0, 512, 512, 160, 512, 160, 352, 0, 352, 0, 160, 160, 160, 160, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=22]
-points = PoolVector2Array( 378.576, 0, 512, 128.24, 512, 512, 0, 512, 0, 131.696, 140.112, 0 )
+points = PoolVector2Array( 384, 128, 512, 128, 512, 512, 0, 512, 0, 128, 128, 128, 128, 0, 384, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=23]
 points = PoolVector2Array( 96, 128, 416, 128, 416, 384, 96, 384 )
@@ -82,67 +82,67 @@ points = PoolVector2Array( 0, 128, 512, 128, 512, 384, 0, 384 )
 points = PoolVector2Array( 320, 128, 512, 128, 512, 384, 320, 384 )
 
 [sub_resource type="ConvexPolygonShape2D" id=27]
-points = PoolVector2Array( 0, 128, 384, 128, 384, 512, 160, 512, 0, 352 )
+points = PoolVector2Array( 0, 128, 384, 128, 384, 512, 160, 512, 160, 352, 0, 352 )
 
 [sub_resource type="ConvexPolygonShape2D" id=28]
-points = PoolVector2Array( 160, 0, 384, 0, 384, 512, 160, 512, 0, 352, 0, 160 )
+points = PoolVector2Array( 160, 0, 384, 0, 384, 512, 160, 512, 160, 352, 0, 352, 0, 160, 160, 160 )
 
 [sub_resource type="ConvexPolygonShape2D" id=29]
-points = PoolVector2Array( 160, 0, 384, 0, 384, 384, 0, 384, 0, 160 )
+points = PoolVector2Array( 160, 0, 384, 0, 384, 384, 0, 384, 0, 160, 160, 160 )
 
 [sub_resource type="ConvexPolygonShape2D" id=30]
-points = PoolVector2Array( 352, 0, 512, 160, 512, 384, 128, 384, 128, 0 )
+points = PoolVector2Array( 352, 160, 512, 160, 512, 384, 128, 384, 128, 0, 352, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=31]
-points = PoolVector2Array( 352, 0, 512, 160, 512, 384, 0, 384, 0, 160, 160, 0 )
+points = PoolVector2Array( 352, 160, 512, 160, 512, 384, 0, 384, 0, 160, 160, 160, 160, 0, 352, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=32]
-points = PoolVector2Array( 512, 160, 512, 352, 352, 512, 128, 512, 128, 0, 352, 0 )
+points = PoolVector2Array( 512, 352, 352, 352, 352, 512, 128, 512, 128, 0, 352, 0, 352, 160, 512, 160 )
 
 [sub_resource type="ConvexPolygonShape2D" id=33]
-points = PoolVector2Array( 349.712, 0, 512, 153.8, 512, 357.704, 358.352, 512, 154.448, 512, 0, 349.064, 0, 153.8, 144.08, 0 )
+points = PoolVector2Array( 352, 160, 512, 160, 512, 352, 352, 352, 352, 512, 160, 512, 160, 352, 0, 352, 0, 160, 160, 160, 160, 0, 352, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=34]
-points = PoolVector2Array( 0, 128, 512, 128, 512, 352, 352, 512, 160, 512, 0, 352 )
+points = PoolVector2Array( 0, 128, 512, 128, 512, 352, 352, 352, 352, 512, 160, 512, 160, 352, 0, 352 )
 
 [sub_resource type="ConvexPolygonShape2D" id=35]
 points = PoolVector2Array( 0, 0, 512, 0, 512, 384, 0, 384 )
 
 [sub_resource type="ConvexPolygonShape2D" id=36]
-points = PoolVector2Array( 512, 128, 512, 352, 384, 512, 128, 512, 128, 128 )
+points = PoolVector2Array( 512, 384, 384, 384, 384, 512, 128, 512, 128, 96, 512, 96 )
 
 [sub_resource type="ConvexPolygonShape2D" id=37]
-points = PoolVector2Array( 160, 0, 512, 0, 512, 384, 0, 384, 0, 128 )
+points = PoolVector2Array( 160, 0, 512, 0, 512, 384, 0, 384, 0, 160, 160, 160 )
 
 [sub_resource type="ConvexPolygonShape2D" id=38]
-points = PoolVector2Array( 0, 128, 512, 128, 512, 512, 160, 512, 0, 352 )
+points = PoolVector2Array( 0, 128, 512, 128, 512, 512, 160, 512, 160, 352, 0, 352 )
 
 [sub_resource type="ConvexPolygonShape2D" id=39]
-points = PoolVector2Array( 384, 0, 512, 160, 512, 384, 0, 384, 0, 0 )
+points = PoolVector2Array( 352, 160, 512, 160, 512, 384, 0, 384, 0, 0, 352, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=40]
-points = PoolVector2Array( 512, 128, 512, 352, 384, 512, 0, 512, 0, 128 )
+points = PoolVector2Array( 512, 352, 352, 352, 352, 512, 0, 512, 0, 128, 512, 128 )
 
 [sub_resource type="ConvexPolygonShape2D" id=41]
-points = PoolVector2Array( 160, 0, 512, 0, 512, 320, 352, 512, 0, 512, 0, 160 )
+points = PoolVector2Array( 512, 0, 512, 352, 352, 352, 352, 512, 0, 512, 0, 160, 160, 160, 160, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=61]
-points = PoolVector2Array( 0, 0, 384, 0, 384, 512, 160, 512, 0, 320 )
+points = PoolVector2Array( 0, 0, 384, 0, 384, 512, 160, 512, 160, 352, 0, 352 )
 
 [sub_resource type="ConvexPolygonShape2D" id=43]
-points = PoolVector2Array( 512, 0, 512, 352, 352, 512, 128, 512, 128, 0 )
+points = PoolVector2Array( 512, 352, 352, 352, 352, 512, 128, 512, 128, 0, 512, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=44]
-points = PoolVector2Array( 352, 0, 512, 160, 512, 512, 128, 512, 128, 0 )
+points = PoolVector2Array( 352, 160, 512, 160, 512, 512, 128, 512, 128, 0, 352, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=45]
-points = PoolVector2Array( 160, 0, 384, 0, 384, 512, 0, 512, 0, 160 )
+points = PoolVector2Array( 160, 0, 384, 0, 384, 512, 0, 512, 0, 160, 160, 160 )
 
 [sub_resource type="ConvexPolygonShape2D" id=46]
 points = PoolVector2Array( 128, 0, 384, 0, 384, 512, 128, 512 )
 
 [sub_resource type="ConvexPolygonShape2D" id=47]
-points = PoolVector2Array( 352, 0, 512, 160, 512, 512, 160, 512, 0, 384, 0, 0 )
+points = PoolVector2Array( 352, 160, 512, 160, 512, 512, 160, 512, 160, 352, 0, 352, 0, 0, 352, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=48]
 points = PoolVector2Array( 0, 0, 512, 0, 512, 512, 0, 512 )
@@ -508,14 +508,14 @@ points = PoolVector2Array( 0, 128, 512, 128, 512, 512, 0, 512 )
 17/navigation_offset = Vector2( 0, 0 )
 17/shape_offset = Vector2( 0, 0 )
 17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-17/shape = SubResource( 12 )
+17/shape = SubResource( 63 )
 17/shape_one_way = false
 17/shape_one_way_margin = 1.0
 17/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 12 ),
+"shape": SubResource( 63 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 17/z_index = 0
