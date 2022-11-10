@@ -27,3 +27,15 @@ texture = SubResource( 1 )
 offset = Vector2( 150, 175 )
 current = true
 zoom = Vector2( 12.5, 12.5 )
+
+[node name="UI_Container" type="CanvasLayer" parent="."]
+
+[node name="Inventory" type="Control" parent="UI_Container"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="InventoryDataManager" type="Node" parent="UI_Container/Inventory"]
+
+[node name="Panel" type="Panel" parent="UI_Container/Inventory"]
+margin_right = 40.0
+margin_bottom = 40.0
