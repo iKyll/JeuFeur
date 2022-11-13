@@ -2,7 +2,8 @@ extends Node
 
 var item_list : Array = []
 
-onready var gridContainer = load("./Panel/GridContainer")
+# Path marche pas
+onready var gridContainer = $Panel/GridContainer
 
 class ItemAmount:
 	var item: ItemData = null
