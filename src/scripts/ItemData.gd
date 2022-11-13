@@ -1,12 +1,25 @@
 extends Resource
 class_name ItemData
 
-export var damage: int = 0
-export var potion: bool = false
-export var equipable: String = ""
-export var item_name: String = ""
-export var item_desc: String = ""
+# IMPORTANT
+# Ecrire les données a l'intérieur des variables comme ici
 
-export var price: int = -1
+# Stackable, Armor, Weapon
+export var category: String = ""
+# For Stackable: potion
+# For Armor: Helmet, Chestplate, Leggings, Boots, Ring/Collar
+# For Weapon: Sword, Daggers, Bow, Magic Wand
+export var type: String = ""
+
+export var damage: int = -1
+export var defense: int = -1
+export var health: int = -1
+
+export var item_name: String = ""
+
+
+export var buy_price: int = -1
+export var sell_price: int = -1
 
 export var texture : Texture = null
+export var world_texture: Texture = null

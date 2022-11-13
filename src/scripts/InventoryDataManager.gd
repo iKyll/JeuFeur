@@ -2,6 +2,8 @@ extends Node
 
 var item_list : Array = []
 
+onready var gridContainer = load("./Panel/GridContainer")
+
 class ItemAmount:
 	var item: ItemData = null
 	var amount: int = 0
@@ -14,7 +16,7 @@ func _append_item(item: ItemData, amount: int = 1) -> void:
 	var item_amount_id = _find_item_id(item)
 	print(item_amount_id)
 	
-	if item_amount_id != -1 and item.potion:
+	if item_amount_id != -1 and item.category == "Stackable":
 		item_list[item_amount_id].amount += amount
 	else:	
 		item_list.append(ItemAmount.new(amount, item))
@@ -45,16 +47,23 @@ func _print_inventory() -> void:
 	
 	print(" ")
 	print("--- -------- ------- ---")
-	
-	_append_item(ItemData.new(), 1)
-	
-func _ready() -> void:
-	var __ = connect("object_collected", self, "_on_EVENTS_object_collected")
 
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("inventory"):
 		_print_inventory()
 
-func _on_EVENTS_object_collected(item: Resource) -> void:
+#func _ready() -> void:
+#	var __ = connect("object_collected", self, "_on_object_collected")
+
+func _reload_icon_items() -> void: 
+	for item in item_list:
+		pass
+		
+#
+# Les slots doivent être des scenes, car ils doivent contenir l'information de quel item ils possedent
+#
+
+func _on_object_collected(item: Resource) -> void:
 	if item is ItemData:
 		_append_item(item)
+		_print_inventory()
