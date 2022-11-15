@@ -4,3 +4,4 @@ extends Node
 
 signal spawn_item(itemData, pos)
 signal object_collected(obj)
+

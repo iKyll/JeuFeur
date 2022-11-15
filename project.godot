@@ -23,11 +23,17 @@ _global_script_classes=[ {
 "class": "ItemData",
 "language": "GDScript",
 "path": "res://src/scripts/ItemData.gd"
+}, {
+"base": "Control",
+"class": "Profile",
+"language": "GDScript",
+"path": "res://src/scripts/Profile.gd"
 } ]
 _global_script_class_icons={
 "Actor": "",
 "Inventory": "",
-"ItemData": ""
+"ItemData": "",
+"Profile": ""
 }
 
 [application]

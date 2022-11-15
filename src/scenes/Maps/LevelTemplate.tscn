@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=2]
+[gd_scene load_steps=72 format=2]
 
 [ext_resource path="res://src/img/Mossy Tileset/Mossy - TileSet.png" type="Texture" id=1]
 [ext_resource path="res://src/scenes/Actors/Player.tscn" type="PackedScene" id=2]
@@ -17,6 +17,10 @@
 [ext_resource path="res://src/Themes/Inventory_Theme.tres" type="Theme" id=15]
 [ext_resource path="res://src/scripts/Inventory.gd" type="Script" id=16]
 [ext_resource path="res://src/scenes/Inventory/Slot.tscn" type="PackedScene" id=17]
+[ext_resource path="res://src/scripts/Profile.gd" type="Script" id=18]
+[ext_resource path="res://src/scripts/ProfileDataManager.gd" type="Script" id=19]
+[ext_resource path="res://src/img/inventory/SlotHelmet.png" type="Texture" id=20]
+[ext_resource path="res://src/scenes/Inventory/SlotProfile.tscn" type="PackedScene" id=21]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 384, 0, 384, 512, 0, 512 )
@@ -1350,6 +1354,7 @@ layer = 128
 [node name="Inventory" type="Control" parent="UI_Container"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+rect_min_size = Vector2( 1024, 600 )
 theme = ExtResource( 15 )
 script = ExtResource( 16 )
 __meta__ = {
@@ -1705,3 +1710,93 @@ align = 1
 valign = 1
 
 [node name="Tween" type="Tween" parent="UI_Container/Inventory"]
+
+[node name="Profile" type="Control" parent="UI_Container"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 1024, 600 )
+theme = ExtResource( 15 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Tween" type="Tween" parent="UI_Container/Profile"]
+
+[node name="Panel" type="Panel" parent="UI_Container/Profile"]
+margin_left = -300.0
+margin_top = 100.0
+margin_bottom = 475.0
+rect_min_size = Vector2( 300, 375 )
+
+[node name="Label" type="Label" parent="UI_Container/Profile/Panel"]
+margin_right = 300.0
+margin_bottom = 50.0
+text = "Profile"
+align = 1
+valign = 1
+
+[node name="SlotSecondWeapon" type="TextureRect" parent="UI_Container/Profile/Panel"]
+margin_left = 215.0
+margin_top = 75.0
+margin_right = 275.0
+margin_bottom = 135.0
+texture = ExtResource( 20 )
+expand = true
+
+[node name="SlotScene" parent="UI_Container/Profile/Panel/SlotSecondWeapon" instance=ExtResource( 21 )]
+
+[node name="SlotHelmet" type="TextureRect" parent="UI_Container/Profile/Panel"]
+margin_left = 215.0
+margin_top = 145.0
+margin_right = 275.0
+margin_bottom = 205.0
+texture = ExtResource( 20 )
+expand = true
+
+[node name="SlotScene" parent="UI_Container/Profile/Panel/SlotHelmet" instance=ExtResource( 21 )]
+
+[node name="SlotBoots" type="TextureRect" parent="UI_Container/Profile/Panel"]
+margin_left = 215.0
+margin_top = 215.0
+margin_right = 275.0
+margin_bottom = 275.0
+texture = ExtResource( 20 )
+expand = true
+
+[node name="SlotScene" parent="UI_Container/Profile/Panel/SlotBoots" instance=ExtResource( 21 )]
+
+[node name="SlotFirstWeapon" type="TextureRect" parent="UI_Container/Profile/Panel"]
+margin_left = 25.0
+margin_top = 75.0
+margin_right = 85.0
+margin_bottom = 135.0
+texture = ExtResource( 20 )
+expand = true
+
+[node name="SlotScene" parent="UI_Container/Profile/Panel/SlotFirstWeapon" instance=ExtResource( 21 )]
+
+[node name="SlotChestplate" type="TextureRect" parent="UI_Container/Profile/Panel"]
+margin_left = 25.0
+margin_top = 145.0
+margin_right = 85.0
+margin_bottom = 205.0
+texture = ExtResource( 20 )
+expand = true
+
+[node name="SlotScene" parent="UI_Container/Profile/Panel/SlotChestplate" instance=ExtResource( 21 )]
+
+[node name="SlotPants" type="TextureRect" parent="UI_Container/Profile/Panel"]
+margin_left = 25.0
+margin_top = 215.0
+margin_right = 85.0
+margin_bottom = 275.0
+texture = ExtResource( 20 )
+expand = true
+
+[node name="SlotScene" parent="UI_Container/Profile/Panel/SlotPants" instance=ExtResource( 21 )]
+
+[node name="ProfileDataManager" type="Node" parent="UI_Container/Profile"]
+script = ExtResource( 19 )
+
+[connection signal="addItemtoInventory" from="UI_Container/Profile/ProfileDataManager" to="UI_Container/Inventory/InventoryDataManager" method="_on_ProfileDataManager_addItemtoInventory"]
