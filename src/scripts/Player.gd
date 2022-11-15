@@ -12,7 +12,7 @@ var motion = Vector2()
 # 1 = Droite; -1 = Gauche
 var _facing : int = 1
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	motion.y += GRAVITY
 	if _facing == 1:
 		if motion.x - LOOSE > 0:
