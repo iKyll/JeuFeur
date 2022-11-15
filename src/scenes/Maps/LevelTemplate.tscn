@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=2]
+[gd_scene load_steps=68 format=2]
 
 [ext_resource path="res://src/img/Mossy Tileset/Mossy - TileSet.png" type="Texture" id=1]
 [ext_resource path="res://src/scenes/Actors/Player.tscn" type="PackedScene" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://src/img/inventory/slot_base.jpg" type="Texture" id=14]
 [ext_resource path="res://src/Themes/Inventory_Theme.tres" type="Theme" id=15]
 [ext_resource path="res://src/scripts/Inventory.gd" type="Script" id=16]
+[ext_resource path="res://src/scenes/Inventory/Slot.tscn" type="PackedScene" id=17]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 384, 0, 384, 512, 0, 512 )
@@ -1351,6 +1352,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 15 )
 script = ExtResource( 16 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="InventoryDataManager" type="Node" parent="UI_Container/Inventory"]
 script = ExtResource( 12 )
@@ -1381,14 +1385,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot1"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot1" instance=ExtResource( 17 )]
 
 [node name="Slot2" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 52.0
@@ -1398,14 +1395,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot2"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot2" instance=ExtResource( 17 )]
 
 [node name="Slot3" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 104.0
@@ -1415,14 +1405,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot3"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot3" instance=ExtResource( 17 )]
 
 [node name="Slot4" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 156.0
@@ -1432,14 +1415,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot4"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot4" instance=ExtResource( 17 )]
 
 [node name="Slot5" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 208.0
@@ -1449,14 +1425,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot5"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot5" instance=ExtResource( 17 )]
 
 [node name="Slot6" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_top = 52.0
@@ -1466,14 +1435,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot6"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot6" instance=ExtResource( 17 )]
 
 [node name="Slot7" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 52.0
@@ -1484,14 +1446,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot7"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot7" instance=ExtResource( 17 )]
 
 [node name="Slot8" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 104.0
@@ -1502,14 +1457,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot8"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot8" instance=ExtResource( 17 )]
 
 [node name="Slot9" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 156.0
@@ -1520,14 +1468,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot9"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot9" instance=ExtResource( 17 )]
 
 [node name="Slot10" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 208.0
@@ -1538,14 +1479,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot10"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot10" instance=ExtResource( 17 )]
 
 [node name="Slot11" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_top = 104.0
@@ -1555,14 +1489,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot11"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot11" instance=ExtResource( 17 )]
 
 [node name="Slot12" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 52.0
@@ -1573,14 +1500,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot12"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot12" instance=ExtResource( 17 )]
 
 [node name="Slot13" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 104.0
@@ -1591,14 +1511,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot13"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot13" instance=ExtResource( 17 )]
 
 [node name="Slot14" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 156.0
@@ -1609,14 +1522,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot14"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot14" instance=ExtResource( 17 )]
 
 [node name="Slot15" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 208.0
@@ -1627,14 +1533,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot15"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot15" instance=ExtResource( 17 )]
 
 [node name="Slot16" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_top = 156.0
@@ -1644,14 +1543,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot16"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot16" instance=ExtResource( 17 )]
 
 [node name="Slot17" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 52.0
@@ -1662,14 +1554,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot17"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot17" instance=ExtResource( 17 )]
 
 [node name="Slot18" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 104.0
@@ -1680,14 +1565,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot18"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot18" instance=ExtResource( 17 )]
 
 [node name="Slot19" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 156.0
@@ -1698,14 +1576,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot19"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot19" instance=ExtResource( 17 )]
 
 [node name="Slot20" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 208.0
@@ -1716,14 +1587,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot20"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot20" instance=ExtResource( 17 )]
 
 [node name="Slot21" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_top = 208.0
@@ -1733,14 +1597,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot21"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot21" instance=ExtResource( 17 )]
 
 [node name="Slot22" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 52.0
@@ -1751,14 +1608,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot22"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot22" instance=ExtResource( 17 )]
 
 [node name="Slot23" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 104.0
@@ -1769,14 +1619,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot23"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot23" instance=ExtResource( 17 )]
 
 [node name="Slot24" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 156.0
@@ -1787,14 +1630,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot24"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot24" instance=ExtResource( 17 )]
 
 [node name="Slot25" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 208.0
@@ -1805,14 +1641,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot25"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot25" instance=ExtResource( 17 )]
 
 [node name="Slot26" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_top = 260.0
@@ -1822,14 +1651,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot26"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot26" instance=ExtResource( 17 )]
 
 [node name="Slot27" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 52.0
@@ -1840,14 +1662,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot27"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot27" instance=ExtResource( 17 )]
 
 [node name="Slot28" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 104.0
@@ -1858,14 +1673,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot28"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot28" instance=ExtResource( 17 )]
 
 [node name="Slot29" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 156.0
@@ -1876,14 +1684,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot29"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot29" instance=ExtResource( 17 )]
 
 [node name="Slot30" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 208.0
@@ -1894,14 +1695,7 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot30"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-expand = true
+[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot30" instance=ExtResource( 17 )]
 
 [node name="Label" type="Label" parent="UI_Container/Inventory/Panel"]
 margin_right = 300.0

@@ -34,7 +34,7 @@ _global_script_class_icons={
 
 config/name="Feur"
 run/main_scene="res://src/scenes/Maps/LevelTemplate.tscn"
-config/icon="res://icon.png"
+config/icon="res://src/img/Items/Inventory/sword.png"
 
 [display]
 

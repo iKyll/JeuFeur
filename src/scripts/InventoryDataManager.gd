@@ -2,8 +2,7 @@ extends Node
 
 var item_list : Array = []
 
-# Path marche pas
-onready var gridContainer = $Panel/GridContainer
+onready var gridContainer = get_node("../Panel/GridContainer")
 
 class ItemAmount:
 	var item: ItemData = null
@@ -15,7 +14,6 @@ class ItemAmount:
 
 func _append_item(item: ItemData, amount: int = 1) -> void:
 	var item_amount_id = _find_item_id(item)
-	print(item_amount_id)
 	
 	if item_amount_id != -1 and item.category == "Stackable":
 		item_list[item_amount_id].amount += amount
@@ -45,6 +43,11 @@ func _print_inventory() -> void:
 	
 	for item in item_list:
 		print(item.item.item_name + " : " + String(item.amount))
+	#
+	# For testing purposes
+	#
+	_test()
+	_reload_icon_items()
 	
 	print(" ")
 	print("--- -------- ------- ---")
@@ -56,15 +59,42 @@ func _input(_event: InputEvent) -> void:
 #func _ready() -> void:
 #	var __ = connect("object_collected", self, "_on_object_collected")
 
+func _load_current_drawed_items():
+	var list = []
+	for i in range(30):
+		var scene = gridContainer.get_node("Slot" + String(i + 1)).get_node("SlotScene")
+		if scene.item != null:
+			list.append(scene.item)
+			list.append(scene.item)
+	return list
+
 func _reload_icon_items() -> void: 
+	var drawed_items = _load_current_drawed_items()
 	for item in item_list:
-		pass
-		
+		if drawed_items.find(item) == -1:
+			# Si l'item n'est actuellement pas affiché
+			# Trouver le premier slot vide et lui faire charger l'item
+			for i in range(30):
+				var scene = gridContainer.get_node("Slot" + String(i + 1)).get_node("SlotScene")
+				if scene.item == null:
+					print(item.item.item_name)
+					scene._load(item)
+					scene._load_texture()
+
 #
 # Les slots doivent être des scenes, car ils doivent contenir l'information de quel item ils possedent
 #
 
+func _test():
+	var stats = ItemData.new()
+	stats.category = "weapon"
+	stats.type = "sword"
+	stats.item_name = "sword"
+	
+	_append_item(stats)
+
 func _on_object_collected(item: Resource) -> void:
 	if item is ItemData:
 		_append_item(item)
+		_reload_icon_items()
 		_print_inventory()

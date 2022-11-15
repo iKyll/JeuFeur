@@ -22,7 +22,6 @@ func _ready():
 	var __ = connect("hidden_changed", self, "_on_hidden_changed")
 
 func _animation(appear: bool) -> void:
-	print("Animating")
 	var from = panel.rect_position
 	var to = visible_position if !appear else hidden_position
 	
