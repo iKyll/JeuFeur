@@ -1,18 +1,18 @@
 extends Node
 
-onready var SlotFirstWeapon = get_node("Panel/SlotFirstWeapon")
-onready var SlotSecondWeapon = get_node("Panel/SlotSecondWeapon")
-onready var SlotHelmet = get_node("Panel/SlotHelmet")
-onready var SlotChestplate = get_node("Panel/SlotChestplate")
-onready var SlotPants = get_node("Panel/SlotPants")
-onready var SlotBoots = get_node("Panel/SlotBoots")
+onready var SlotFirstWeapon = get_node("/root/LevelTemplate/UI_Container/Profile/Panel/SlotFirstWeapon")
+onready var SlotSecondWeapon = get_node("/root/LevelTemplate/UI_Container/Profile/Panel/SlotSecondWeapon")
+onready var SlotHelmet = get_node("/root/LevelTemplate/UI_Container/Profile/Panel/SlotHelmet")
+onready var SlotChestplate = get_node("/root/LevelTemplate/UI_Container/Profile/Panel/SlotChestplate")
+onready var SlotPants = get_node("/root/LevelTemplate/UI_Container/Profile/Panel/SlotPants")
+onready var SlotBoots = get_node("/root/LevelTemplate/UI_Container/Profile/Panel/SlotBoots")
 
-onready var SceneFirstWeapon = SlotFirstWeapon.get_node("SlotScene")
-onready var SceneSecondWeapon = SlotSecondWeapon.get_node("SlotScene")
-onready var SceneHelmet = SlotHelmet.get_node("SlotScene")
-onready var SceneChestplate = SlotChestplate.get_node("SlotScene")
-onready var ScenePants = SlotPants.get_node("SlotScene")
-onready var SceneBoots = SlotBoots.get_node("SlotScene")
+onready var SceneFirstWeapon = SlotFirstWeapon.get_node("Icon")
+onready var SceneSecondWeapon = SlotSecondWeapon.get_node("Icon")
+onready var SceneHelmet = SlotHelmet.get_node("Icon")
+onready var SceneChestplate = SlotChestplate.get_node("Icon")
+onready var ScenePants = SlotPants.get_node("Icon")
+onready var SceneBoots = SlotBoots.get_node("Icon")
 
 onready var equipped = {
 	"FirstWeapon": null,
@@ -20,7 +20,7 @@ onready var equipped = {
 	"Helmet": null,
 	"Chestplate": null,
 	"Pants": null,
-	"Boots": null,	}
+	"Boots": null}
 
 signal addItemtoInventory(item)
 

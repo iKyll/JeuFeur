@@ -16,11 +16,11 @@
 [ext_resource path="res://src/img/inventory/slot_base.jpg" type="Texture" id=14]
 [ext_resource path="res://src/Themes/Inventory_Theme.tres" type="Theme" id=15]
 [ext_resource path="res://src/scripts/Inventory.gd" type="Script" id=16]
-[ext_resource path="res://src/scenes/Inventory/Slot.tscn" type="PackedScene" id=17]
 [ext_resource path="res://src/scripts/Profile.gd" type="Script" id=18]
 [ext_resource path="res://src/scripts/ProfileDataManager.gd" type="Script" id=19]
 [ext_resource path="res://src/img/inventory/SlotHelmet.png" type="Texture" id=20]
-[ext_resource path="res://src/scenes/Inventory/SlotProfile.tscn" type="PackedScene" id=21]
+[ext_resource path="res://src/scripts/SlotInventory.gd" type="Script" id=21]
+[ext_resource path="res://src/scripts/SlotProfile.gd" type="Script" id=22]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 384, 0, 384, 512, 0, 512 )
@@ -1390,7 +1390,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot1" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot2" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 52.0
@@ -1400,7 +1407,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot2" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot3" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 104.0
@@ -1410,7 +1424,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot3" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot4" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 156.0
@@ -1420,7 +1441,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot4" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot5" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 208.0
@@ -1430,7 +1458,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot5" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot6" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_top = 52.0
@@ -1440,7 +1475,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot6" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot6"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot7" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 52.0
@@ -1451,7 +1493,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot7" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot7"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot8" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 104.0
@@ -1462,7 +1511,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot8" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot8"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot9" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 156.0
@@ -1473,7 +1529,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot9" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot9"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot10" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 208.0
@@ -1484,7 +1547,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot10" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot10"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot11" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_top = 104.0
@@ -1494,7 +1564,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot11" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot11"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot12" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 52.0
@@ -1505,7 +1582,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot12" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot12"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot13" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 104.0
@@ -1516,7 +1600,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot13" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot13"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot14" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 156.0
@@ -1527,7 +1618,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot14" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot14"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot15" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 208.0
@@ -1538,7 +1636,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot15" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot15"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot16" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_top = 156.0
@@ -1548,7 +1653,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot16" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot16"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot17" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 52.0
@@ -1559,7 +1671,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot17" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot17"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot18" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 104.0
@@ -1570,7 +1689,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot18" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot18"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot19" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 156.0
@@ -1581,7 +1707,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot19" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot19"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot20" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 208.0
@@ -1592,7 +1725,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot20" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot20"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot21" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_top = 208.0
@@ -1602,7 +1742,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot21" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot21"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot22" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 52.0
@@ -1613,7 +1760,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot22" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot22"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot23" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 104.0
@@ -1624,7 +1778,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot23" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot23"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot24" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 156.0
@@ -1635,7 +1796,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot24" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot24"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot25" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 208.0
@@ -1646,7 +1814,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot25" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot25"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot26" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_top = 260.0
@@ -1656,7 +1831,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot26" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot26"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot27" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 52.0
@@ -1667,7 +1849,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot27" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot27"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot28" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 104.0
@@ -1678,7 +1867,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot28" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot28"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot29" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 156.0
@@ -1689,7 +1885,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot29" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot29"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Slot30" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
 margin_left = 208.0
@@ -1700,7 +1903,14 @@ rect_min_size = Vector2( 42.5, 42.5 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Inventory/Panel/GridContainer/Slot30" instance=ExtResource( 17 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer/Slot30"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 21 )
 
 [node name="Label" type="Label" parent="UI_Container/Inventory/Panel"]
 margin_right = 300.0
@@ -1744,7 +1954,15 @@ margin_bottom = 135.0
 texture = ExtResource( 20 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Profile/Panel/SlotSecondWeapon" instance=ExtResource( 21 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Profile/Panel/SlotSecondWeapon"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+expand = true
+script = ExtResource( 22 )
 
 [node name="SlotHelmet" type="TextureRect" parent="UI_Container/Profile/Panel"]
 margin_left = 215.0
@@ -1754,7 +1972,15 @@ margin_bottom = 205.0
 texture = ExtResource( 20 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Profile/Panel/SlotHelmet" instance=ExtResource( 21 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Profile/Panel/SlotHelmet"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+expand = true
+script = ExtResource( 22 )
 
 [node name="SlotBoots" type="TextureRect" parent="UI_Container/Profile/Panel"]
 margin_left = 215.0
@@ -1764,7 +1990,15 @@ margin_bottom = 275.0
 texture = ExtResource( 20 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Profile/Panel/SlotBoots" instance=ExtResource( 21 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Profile/Panel/SlotBoots"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+expand = true
+script = ExtResource( 22 )
 
 [node name="SlotFirstWeapon" type="TextureRect" parent="UI_Container/Profile/Panel"]
 margin_left = 25.0
@@ -1774,7 +2008,15 @@ margin_bottom = 135.0
 texture = ExtResource( 20 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Profile/Panel/SlotFirstWeapon" instance=ExtResource( 21 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Profile/Panel/SlotFirstWeapon"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+expand = true
+script = ExtResource( 22 )
 
 [node name="SlotChestplate" type="TextureRect" parent="UI_Container/Profile/Panel"]
 margin_left = 25.0
@@ -1784,7 +2026,15 @@ margin_bottom = 205.0
 texture = ExtResource( 20 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Profile/Panel/SlotChestplate" instance=ExtResource( 21 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Profile/Panel/SlotChestplate"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+expand = true
+script = ExtResource( 22 )
 
 [node name="SlotPants" type="TextureRect" parent="UI_Container/Profile/Panel"]
 margin_left = 25.0
@@ -1794,9 +2044,77 @@ margin_bottom = 275.0
 texture = ExtResource( 20 )
 expand = true
 
-[node name="SlotScene" parent="UI_Container/Profile/Panel/SlotPants" instance=ExtResource( 21 )]
+[node name="Icon" type="TextureRect" parent="UI_Container/Profile/Panel/SlotPants"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+expand = true
+script = ExtResource( 22 )
 
 [node name="ProfileDataManager" type="Node" parent="UI_Container/Profile"]
 script = ExtResource( 19 )
 
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot1/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot1/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot2/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot2/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot3/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot3/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot4/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot4/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot5/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot5/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot6/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot6/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot7/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot7/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot8/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot8/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot9/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot9/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot10/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot10/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot11/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot11/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot12/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot12/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot13/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot13/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot14/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot14/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot15/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot15/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot16/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot16/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot17/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot17/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot18/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot18/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot19/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot19/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot20/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot20/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot21/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot21/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot22/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot22/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot23/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot23/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot24/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot24/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot25/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot25/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot26/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot26/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot27/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot27/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot28/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot28/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot29/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot29/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
+[connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot30/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
+[connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot30/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
 [connection signal="addItemtoInventory" from="UI_Container/Profile/ProfileDataManager" to="UI_Container/Inventory/InventoryDataManager" method="_on_ProfileDataManager_addItemtoInventory"]
