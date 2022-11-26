@@ -1856,6 +1856,7 @@ margin_left = 2.0
 margin_top = 2.0
 margin_right = -2.0
 margin_bottom = -2.0
+expand = true
 script = ExtResource( 21 )
 
 [node name="Slot28" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
@@ -1874,6 +1875,7 @@ margin_left = 2.0
 margin_top = 2.0
 margin_right = -2.0
 margin_bottom = -2.0
+expand = true
 script = ExtResource( 21 )
 
 [node name="Slot29" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
@@ -1892,6 +1894,7 @@ margin_left = 2.0
 margin_top = 2.0
 margin_right = -2.0
 margin_bottom = -2.0
+expand = true
 script = ExtResource( 21 )
 
 [node name="Slot30" type="TextureRect" parent="UI_Container/Inventory/Panel/GridContainer"]
@@ -1910,6 +1913,7 @@ margin_left = 2.0
 margin_top = 2.0
 margin_right = -2.0
 margin_bottom = -2.0
+expand = true
 script = ExtResource( 21 )
 
 [node name="Label" type="Label" parent="UI_Container/Inventory/Panel"]
@@ -2057,6 +2061,7 @@ script = ExtResource( 22 )
 [node name="ProfileDataManager" type="Node" parent="UI_Container/Profile"]
 script = ExtResource( 19 )
 
+[connection signal="equip" from="UI_Container/Inventory/InventoryDataManager" to="UI_Container/Profile/ProfileDataManager" method="_on_InventoryDataManager_equip"]
 [connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot1/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]
 [connection signal="removeItemFromInventory" from="UI_Container/Inventory/Panel/GridContainer/Slot1/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_removeItemFromInventory"]
 [connection signal="addItemtoInventorySlot" from="UI_Container/Inventory/Panel/GridContainer/Slot2/Icon" to="UI_Container/Inventory/InventoryDataManager" method="_on_Icon_addItemtoInventorySlot"]

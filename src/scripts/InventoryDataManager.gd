@@ -4,6 +4,8 @@ var item_list : Array = []
 
 onready var gridContainer = get_node("../Panel/GridContainer")
 
+signal equip(item, scene)
+
 class ItemAmount:
 	var item: ItemData = null
 	var amount: int = 0
@@ -74,6 +76,8 @@ func _print_inventory() -> void:
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("inventory"):
 		_print_inventory()
+	if Input.is_action_just_pressed("Test"):
+		__test()
 
 func _load_current_drawed_items():
 	var list = []
@@ -118,3 +122,11 @@ func _on_Icon_addItemtoInventorySlot(item, slot):
 
 func _on_Icon_removeItemFromInventory(item):
 	_remove_item(item)
+
+func __test():
+	var stats = ItemData.new()
+	stats.category = "weapon"
+	stats.type = "sword"
+	stats.item_name = "sword"
+	
+	emit_signal("equip", ItemAmount.new(1, stats), "SceneFirstWeapon")
